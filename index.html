@@ -10,16 +10,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Noto+Serif+JP:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Noto+Serif+JP:wght@300;400;600&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
     <header class="firstView">
-        <h1>Title</h1>
+        <h1>こころ、<br>うるおう、<br>逗子。</h1>
         <div class="video-area">
-      <video class="video" poster="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/img/movie.jpg" webkit-playsinline playsinline muted autoplay loop>
-        <!--
+            <video class="video" poster="images/sea.JPG" webkit-playsinline playsinline muted autoplay loop>
+                <!--
             poster：動画ファイルが利用できない環境で代替表示される画像
             webkit-playsinline：iOS 9までのSafari用インライン再生指定
             playsinline：iOS 10以降のSafari用インライン再生指定
@@ -28,14 +28,91 @@
             loop：動画をループさせる
             controls：コントロールバーを表示する
         -->
-      <source src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/video/movie.mp4" type="video/mp4">
-      <source src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/video/movie.ogv" type="video/ogv">
-      <source src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/video/movie.webm" type="video/webm">
-      <p>動画を再生できる環境ではありません。</p>
-      </video>
-        <!--/video-area--></div>
+                <source src="images/movie.mp4" type="video/mp4">
+                <source src="images/movie.webm" type="video/webm">
+                <p>動画を再生できる環境ではありません。</p>
+            </video>
+        </div>
     </header>
-    </header>
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <div class="introduction-text-box">
+            <p class="introduction-text-main">逗子に降り立った瞬間、<br>潮風感じる空気の美味しさ。</p>
+            <p class="introduntion-text-sub">
+                海、山、川<br>
+                都心から1時間で感じられる自然に、<br>
+                まちで愛されるグルメの数々。<br>
+                そんな逗子に<br>
+                あなたもきっと来たくなる。</p>
+        </div>
+    </section>
+    <section id="recommend-spots">
+        <h2>Recommend Spots</h2>
+        <div class="recommend-spot-one">
+            <div class="spot-img">
+                <img src="images/zushiBeach.JPG" alt="">
+            </div>
+            <div class="recommend-spot-text-box">
+                <h3>逗子海岸</h3>
+                <p>江ノ島、富士山を見渡せる海岸。砂浜を散歩するだけでも心が洗われる。<br>
+                    花火大会、映画祭、NightWave、砂の芸術祭などイベントのほか、<br>
+                    SUPやマリンスポーツも楽しめる。
+                </p>
+            </div>
+        </div>
+        <div class="recommend-spot-two">
+            <div class="spot-img">
+                <img src="images/beachTaiyounotou.JPG" alt="">
+            </div>
+            <div class="spot-img">
+                <img src="images/moomoos.jpeg" alt="">
+            </div>
+            <div class="recommend-spot-text-box">
+                <h3>moomoo’s</h3>
+                <p>2006年オープンの地元民に愛されるソフトクリーム店。<br>
+                    三浦半島・関口牧場から毎朝直送の牧場しぼり牛乳を使用し、<br>
+                    濃厚なのにさっぱりとした味わい。今週の味は60種類以上も。
+                </p>
+            </div>
+        </div>
+        <div class="recommend-spot-three">
+            <div class="spot-img">
+                <img src="images/taiyouKaisen.JPG" alt="">
+            </div>
+            <div class="recommend-spot-text-box">
+                <h3>海畑marche太陽</h3>
+                <p>地産地消をテーマに、三崎漁港や長井漁港など地元でとれた新鮮な魚介、<br>
+                    野菜、お肉を使った料理が人気。地酒も豊富に用意されている。<br>
+                    地魚地野菜天ぷら盛りは塩でいただくのがおすすめ。
+                </p>
+            </div>
+            <div class="spot-img">
+                <img src="images/taiyouTempra.JPG" alt="">
+            </div>
+        </div>
+        <div class="recommend-spot-four">
+            <div class="spot-img">
+                <img src="images/suzukiya.JPG" alt="">
+            </div>
+            <div class="recommend-spot-text-box">
+                <h3>スズキヤ</h3>
+                <p>地元で愛されるご当地スーパー。お弁当・お惣菜大賞2023では<br>
+                    14,286件の応募から4品が入選し、テレビの取材や特集も組まれるほど<br>
+                    こだわりのおいしさが詰まったオリジナルの弁当や惣菜が人気。
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="access">
+        <h2>Access</h2>
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/d/embed?mid=1HrBt4GSHYLdjbhoN1zZShCHmiPckS5g&hl=ja&ehbc=2E312F"></iframe>
+        </div>
+        <div class="access-image">
+            <img src="images/accessImage.svg" alt="">
+        </div>
+    </section>
 
 </body>
 
