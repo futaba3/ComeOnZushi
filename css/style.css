@@ -8,15 +8,19 @@
 }
 
 .firstView {
-    position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
-}
-.video-area{
     position: relative;
-    z-index: -1;/*最背面に設定*/
+    /*h1の中央寄せ配置の起点とするためのrelative*/
+}
+
+.video-area {
+    position: relative;
+    z-index: -1;
+    /*最背面に設定*/
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
+
 .video {
     /*天地中央配置*/
     position: absolute;
@@ -27,17 +31,19 @@
     min-height: 100%;
     min-width: 100%;
 }
-h1{
+
+h1 {
     /*要素の配置*/
-    position:absolute;
+    position: absolute;
     /*要素を天地中央寄せ*/
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
-    color:#fff;
+    color: #fff;
     text-shadow: 0 0 15px #666;
     font-size: 40px;
 }
+
 h2 {
     text-align: center;
     font-family: 'Cormorant Garamond', serif;
@@ -45,12 +51,15 @@ h2 {
     font-weight: 400;
     letter-spacing: 0.08em;
 }
+
 p {
     font-weight: 300;
 }
+
 #introduction h2 {
     margin-top: 300px;
 }
+
 .introduction-text-main {
     text-align: center;
     margin-top: 90px;
@@ -58,6 +67,7 @@ p {
     letter-spacing: 0.1em;
     line-height: 1.675;
 }
+
 .introduntion-text-sub {
     text-align: center;
     margin-top: 60px;
@@ -66,38 +76,152 @@ p {
     line-height: 1.833;
 }
 
+.scrolldown {
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    left: 95%;
+    bottom: 50px;
+    /*全体の高さ*/
+    height: 120px;
+}
+.scrolldown::after{
+	content: "";
+    /*描画位置*/
+	position: absolute;
+	top: 0;
+    /*線の形状*/
+	width: 3px;
+	height: 90px;
+	background: #fff;
+    /*線の動き1.6秒かけて動く。永遠にループ*/
+	animation: pathmove 1.8s ease-in-out infinite;
+	opacity: 0;
+}
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove{
+	0%{
+		height: 0;
+		top: 0;
+		opacity: 0;
+	}
+	30%{
+		height: 90px;
+		opacity: 1;
+	}
+	100%{
+		height: 0;
+		top: 120px;
+		opacity: 0;
+	}
+}
+
 #recommend-spots {
     margin-top: 324px;
     background-color: #FEFBF6;
     filter: drop-shadow(0 -50px 50px #FEFBF6);
 }
+
 #recommend-spots h2 {
     padding-top: 150px;
 }
 
-#access h2{
+.recommend-spot-box {
+    position: relative;
+}
+
+.recommend-spot-text-box {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 69.4%;
+    height: 240px;
+    box-shadow: 10px 10px #EAF8FF;
+}
+
+.recommend-spot-text-box h3 {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-align: center;
+    width: 36%;
+    position: relative;
+}
+
+.recommend-spot-text-box h3:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    /*線の上下位置*/
+    display: inline-block;
+    width: 64px;
+    /*線の長さ*/
+    height: 4px;
+    /*線の太さ*/
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /*位置調整*/
+    background-color: #333;
+}
+
+.recommend-spot-text-box p {
+    line-height: 2.0625;
+}
+
+#access h2 {
     margin-top: 150px;
 }
+
 .map {
     margin: 75px auto 0;
     text-align: center;
-    position : relative;
-    height : 0;
+    position: relative;
+    height: 560px;
     width: 69.4%;
-    padding-bottom : 56.25%;
 }
+
 .map iframe {
-    position : absolute;
-    top : 0;
-    left : 0;
-    height : 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
 }
+
 .access-image {
     text-align: center;
     margin-top: 26px;
 }
+
 .access-image img {
     width: 62.5%;
     height: auto;
+}
+
+footer {
+    text-align: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../images/sea.JPG);
+    background-position: 50%;
+    background-size: cover;
+}
+
+footer p {
+    color: #fff;
+}
+
+.footer-text-main {
+    font-size: 40px;
+    letter-spacing: 0.2em;
+    padding-top: 180px;
+}
+
+.footer-text-sub {
+    font-size: 16px;
+    margin-top: 104px;
+}
+
+.footer-copyright {
+    font-size: 13px;
+    margin-top: 1px;
+    padding-bottom: 37px;
 }
