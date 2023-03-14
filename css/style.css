@@ -229,10 +229,11 @@ p {
 }
 
 #access {
-    filter: drop-shadow(0 -50px 50px #fff);
+    background-color: #fff;
+    filter: drop-shadow(0 -50px 50px #fff)
 }
 #access h2 {
-    margin-top: 150px;
+    padding-top: 150px;
 }
 
 .map {
