@@ -117,16 +117,12 @@ p {
 
 #recommend-spots {
     margin-top: 324px;
+    padding-bottom: 327px;
     background-color: #FEFBF6;
     filter: drop-shadow(0 -50px 50px #FEFBF6);
 }
-
 #recommend-spots h2 {
     padding-top: 150px;
-}
-
-.recommend-spot-box {
-    position: relative;
 }
 
 .recommend-spot-text-box {
@@ -137,7 +133,6 @@ p {
     height: 240px;
     box-shadow: 10px 10px #EAF8FF;
 }
-
 .recommend-spot-text-box h3 {
     font-size: 32px;
     font-weight: 600;
@@ -146,7 +141,6 @@ p {
     width: 36%;
     position: relative;
 }
-
 .recommend-spot-text-box h3:before {
     content: '';
     position: absolute;
@@ -163,11 +157,80 @@ p {
     /*位置調整*/
     background-color: #333;
 }
-
 .recommend-spot-text-box p {
     line-height: 2.0625;
 }
 
+.recommend-spot-one {
+    margin-top: 150px;
+    position: relative;
+}
+.recommend-spot-one img {
+    margin-left: 9.0277%;
+    /* width: 660px; */
+    width: 45.8333%;
+    height: auto;
+}
+.recommend-spot-one .box-one {
+    position: absolute;
+    margin-left: 21.5277%;
+    bottom: -211px;
+}
+/* 要素のたて314pxがheightの基準 */
+.recommend-spot-two {
+    margin-top: 524px;
+    position: relative;
+}
+.recommend-spot-two .two-img1 {
+    margin-left: 54.2361%;
+    /* width: 465px; */
+    width: 32.2916%;
+}
+.recommend-spot-two .two-img2 {
+    position: absolute;
+    top: 57.3248%;
+    margin-left: 13.4027%;
+    width: 27.98%;
+}
+.recommend-spot-two .box-two {
+    position: absolute;
+    margin-left: 6.7361%;
+    bottom: -230%;
+}
+.recommend-spot-three {
+    margin-top: 1058px;
+}
+.recommend-spot-three .three-img1{
+    margin-left: 30.5555%;
+    width: 53.8194%;
+}
+.recommend-spot-three .three-img2{
+    margin-left: 8.8194%;
+    margin-top: 50px;
+    width: 45.8333%;
+}
+.recommend-spot-three .box-three {
+    margin-top: 50px;
+    margin-left: 20.4166%;
+}
+
+.recommend-spot-four {
+    margin-top: 321px;
+    position: relative;
+}
+.recommend-spot-four img {
+    margin-left: 20.3472%;
+    width: 72.0138%;
+}
+.recommend-spot-four .box-four {
+    margin-left: 9.375%;
+    position: absolute;
+    bottom: -58.36%;
+}
+
+#access {
+    filter: drop-shadow(0 -50px 50px #fff);
+}
 #access h2 {
     margin-top: 150px;
 }
@@ -199,6 +262,7 @@ p {
 }
 
 footer {
+    margin-top: 170px;
     text-align: center;
     background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(../images/sea.JPG);
     background-position: 50%;
