@@ -6,17 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>こころ、うるおう、逗子。</title>
+    <meta name="description" content="海、山、川。都心から1時間で感じられる自然に、まちで愛されるグルメの数々。そんな逗子に、あなたもきっと来たくなる。">
+    <meta property="og:image" content="https://oideyo-kokoro-uruou-zushi.site/images/ogp.png">
+    <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Noto+Serif+JP:wght@300;400;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Noto+Serif+JP:wght@300;400;600&display=swap"
         rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
+    <div class="splash">
+        <div class="splash_logo"><img src="images/logo.jpeg" class="fadeUp"></div>
+    </div>
     <header class="firstView">
         <h1>こころ、<br>うるおう、<br>逗子。</h1>
+        <div class="openbtn"><span></span><span></span></div>
+        <nav class="nav">
+            <ul class="nav_menu_ul">
+              <li class="nav_menu_li"><a href="#introduction">Introduction</a></li>
+              <li class="nav_menu_li"><a href="#recommend-spots">Recommend Spots</a></li>
+              <li class="nav_menu_li"><a href="#access">Access</a></li>
+            </ul>
+          </nav>          
         <div class="video-area">
             <video class="video" poster="images/sea.JPG" webkit-playsinline playsinline muted autoplay loop>
                 <!--
@@ -35,7 +50,7 @@
         </div>
         <div class="scrolldown"></div>
     </header>
-    <section id="introduction">
+    <section id="introduction" class="fadein">
         <h2>Introduction</h2>
         <div class="introduction-text-box">
             <p class="introduction-text-main">逗子に降り立った瞬間、<br>潮風感じる空気の美味しさ。</p>
@@ -48,9 +63,9 @@
         </div>
     </section>
     <section id="recommend-spots">
-        <h2>Recommend Spots</h2>
+        <h2 class="fadein">Recommend Spots</h2>
         <div class="recommend-spot-container">
-            <div class="recommend-spot-one">
+            <div class="recommend-spot-one fadein">
                 <div class="spot-img-one">
                     <img src="images/zushiBeach.JPG" alt="">
                 </div>
@@ -62,7 +77,7 @@
                     </p>
                 </div>
             </div>
-            <div class="recommend-spot-two">
+            <div class="recommend-spot-two fadein">
                 <div class="spot-img">
                     <img src="images/beachTaiyounotou.JPG" alt="" class="two-img1">
                 </div>
@@ -77,7 +92,7 @@
                     </p>
                 </div>
             </div>
-            <div class="recommend-spot-three">
+            <div class="recommend-spot-three fadein">
                 <div class="spot-img">
                     <img src="images/taiyouKaisen.JPG" alt="" class="three-img1">
                 </div>
@@ -92,7 +107,7 @@
                     <img src="images/taiyouTempra.png" alt="" class="three-img2">
                 </div>
             </div>
-            <div class="recommend-spot-four">
+            <div class="recommend-spot-four fadein">
                 <div class="spot-img">
                     <img src="images/suzukiya.png" alt="">
                 </div>
@@ -106,7 +121,7 @@
             </div>
         </div>
     </section>
-    <section id="access">
+    <section id="access" class="fadein">
         <h2>Access</h2>
         <div class="map">
             <iframe

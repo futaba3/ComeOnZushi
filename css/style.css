@@ -7,10 +7,180 @@
     color: #333;
 }
 
+a {
+    text-decoration: none;
+}
+
+.fadein-anime {
+    -webkit-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1.0s;
+    -ms-animation-duration: 1.0s;
+    animation-duration: 1.0s;
+    -webkit-animation-name: fadein-anime;
+    -ms-animation-name: fadein-anime;
+    animation-name: fadein-anime;
+    visibility: visible !important;
+}
+
+@-webkit-keyframes fadein-anime {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes fadein-anime {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.splash {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: #fff;
+    text-align: center;
+    color: #fff;
+}
+
+.splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.splash_logo img {
+    width: 260px;
+}
+
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .firstView {
     position: relative;
     /*h1の中央寄せ配置の起点とするためのrelative*/
 }
+
+.openbtn {
+    position: fixed;
+    top: 50px;
+    right: 5.555%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.openbtn span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 13px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.openbtn.change-color span {
+    background-color: #333;
+}
+
+.openbtn span:nth-of-type(1) {
+    top: 22px;
+    width: 50%;
+}
+
+.openbtn span:nth-of-type(2) {
+    top: 29px;
+    width: 50%;
+}
+
+.openbtn.show span:nth-of-type(1) {
+    top: 20px;
+    left: 16px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 35%;
+    background-color: #333;
+}
+
+.openbtn.show span:nth-of-type(2) {
+    top: 32px;
+    left: 16px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 35%;
+    background-color: #333;
+}
+
+.nav {
+    position: fixed;
+    text-align: center;
+    background-color: #FEFBF6;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+}
+
+.nav ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav a {
+    display: block;
+    font-size: 36px;
+    padding: 30px;
+    color: #333;
+    letter-spacing: 0.08em;
+}
+
 
 .video-area {
     position: relative;
@@ -84,35 +254,39 @@ p {
     /*全体の高さ*/
     height: 120px;
 }
-.scrolldown::after{
-	content: "";
+
+.scrolldown::after {
+    content: "";
     /*描画位置*/
-	position: absolute;
-	top: 0;
+    position: absolute;
+    top: 0;
     /*線の形状*/
-	width: 3px;
-	height: 90px;
-	background: #fff;
+    width: 3px;
+    height: 90px;
+    background: #fff;
     /*線の動き1.6秒かけて動く。永遠にループ*/
-	animation: pathmove 1.8s ease-in-out infinite;
-	opacity: 0;
+    animation: pathmove 1.8s ease-in-out infinite;
+    opacity: 0;
 }
+
 /*高さ・位置・透過が変化して線が上から下に動く*/
-@keyframes pathmove{
-	0%{
-		height: 0;
-		top: 0;
-		opacity: 0;
-	}
-	30%{
-		height: 90px;
-		opacity: 1;
-	}
-	100%{
-		height: 0;
-		top: 120px;
-		opacity: 0;
-	}
+@keyframes pathmove {
+    0% {
+        height: 0;
+        top: 0;
+        opacity: 0;
+    }
+
+    30% {
+        height: 90px;
+        opacity: 1;
+    }
+
+    100% {
+        height: 0;
+        top: 120px;
+        opacity: 0;
+    }
 }
 
 #recommend-spots {
@@ -121,6 +295,7 @@ p {
     background-color: #FEFBF6;
     filter: drop-shadow(0 -50px 50px #FEFBF6);
 }
+
 #recommend-spots h2 {
     padding-top: 150px;
 }
@@ -133,6 +308,7 @@ p {
     height: 240px;
     box-shadow: 10px 10px #EAF8FF;
 }
+
 .recommend-spot-text-box h3 {
     font-size: 32px;
     font-weight: 600;
@@ -141,6 +317,7 @@ p {
     width: 36%;
     position: relative;
 }
+
 .recommend-spot-text-box h3:before {
     content: '';
     position: absolute;
@@ -157,6 +334,7 @@ p {
     /*位置調整*/
     background-color: #333;
 }
+
 .recommend-spot-text-box p {
     line-height: 2.0625;
 }
@@ -165,50 +343,60 @@ p {
     margin-top: 150px;
     position: relative;
 }
+
 .recommend-spot-one img {
     margin-left: 9.0277%;
     /* width: 660px; */
     width: 45.8333%;
     height: auto;
 }
+
 .recommend-spot-one .box-one {
     position: absolute;
     margin-left: 21.5277%;
     bottom: -211px;
 }
+
 /* 要素のたて314pxがheightの基準 */
 .recommend-spot-two {
     margin-top: 524px;
     position: relative;
 }
+
 .recommend-spot-two .two-img1 {
     margin-left: 54.2361%;
     /* width: 465px; */
     width: 32.2916%;
 }
+
 .recommend-spot-two .two-img2 {
     position: absolute;
     top: 57.3248%;
     margin-left: 13.4027%;
     width: 27.98%;
 }
+
 .recommend-spot-two .box-two {
     position: absolute;
     margin-left: 6.7361%;
     bottom: -230%;
 }
+
 .recommend-spot-three {
     margin-top: 1058px;
 }
-.recommend-spot-three .three-img1{
+
+.recommend-spot-three .three-img1 {
     margin-left: 30.5555%;
     width: 53.8194%;
 }
-.recommend-spot-three .three-img2{
+
+.recommend-spot-three .three-img2 {
     margin-left: 8.8194%;
     margin-top: 50px;
     width: 45.8333%;
 }
+
 .recommend-spot-three .box-three {
     margin-top: 50px;
     margin-left: 20.4166%;
@@ -218,10 +406,12 @@ p {
     margin-top: 321px;
     position: relative;
 }
+
 .recommend-spot-four img {
     margin-left: 20.3472%;
     width: 72.0138%;
 }
+
 .recommend-spot-four .box-four {
     margin-left: 9.375%;
     position: absolute;
@@ -232,6 +422,7 @@ p {
     background-color: #fff;
     filter: drop-shadow(0 -50px 50px #fff)
 }
+
 #access h2 {
     padding-top: 150px;
 }
