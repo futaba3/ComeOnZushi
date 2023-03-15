@@ -75,7 +75,7 @@ a {
 
 .fadeUp {
     animation-name: fadeUpAnime;
-    animation-duration: 1.0s;
+    animation-duration: 2.0s;
     animation-fill-mode: forwards;
     opacity: 0;
 }
@@ -83,7 +83,7 @@ a {
 @keyframes fadeUpAnime {
     from {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(50px);
     }
 
     to {
@@ -175,7 +175,8 @@ a {
 
 .nav a {
     display: block;
-    font-size: 36px;
+    font-size: 40px;
+    font-weight: 400;
     padding: 30px;
     color: #333;
     letter-spacing: 0.08em;
@@ -226,8 +227,11 @@ p {
     font-weight: 300;
 }
 
+#introduction {
+    margin-top: 200px;
+}
 #introduction h2 {
-    margin-top: 300px;
+    padding: 100px;
 }
 
 .introduction-text-main {
