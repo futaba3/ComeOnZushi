@@ -230,8 +230,9 @@ p {
 #introduction {
     margin-top: 200px;
 }
+
 #introduction h2 {
-    padding: 100px;
+    padding-top: 100px;
 }
 
 .introduction-text-main {
@@ -313,12 +314,16 @@ p {
     box-shadow: 10px 10px #EAF8FF;
 }
 
-.recommend-spot-text-box h3 {
+.recommend-spot-text-box .spot-name {
+    width: 36%;
+}
+
+.recommend-spot-text-box .spot-name h3 {
     font-size: 32px;
     font-weight: 600;
     letter-spacing: 0.05em;
     text-align: center;
-    width: 36%;
+    width: 100%;
     position: relative;
 }
 
@@ -358,7 +363,7 @@ p {
 .recommend-spot-one .box-one {
     position: absolute;
     margin-left: 21.5277%;
-    bottom: -211px;
+    top: 95%;
 }
 
 /* 要素のたて314pxがheightの基準 */
@@ -367,23 +372,31 @@ p {
     position: relative;
 }
 
-.recommend-spot-two .two-img1 {
+.recommend-spot-two .spot-two-img1 {
     margin-left: 54.2361%;
     /* width: 465px; */
     width: 32.2916%;
 }
 
-.recommend-spot-two .two-img2 {
+.recommend-spot-two .spot-two-img1 img {
+    width: 100%;
+}
+
+.recommend-spot-two .spot-two-img2 {
     position: absolute;
     top: 57.3248%;
     margin-left: 13.4027%;
     width: 27.98%;
 }
 
+.recommend-spot-two .spot-two-img2 img {
+    width: 100%;
+}
+
 .recommend-spot-two .box-two {
     position: absolute;
     margin-left: 6.7361%;
-    bottom: -230%;
+    top: 255%;
 }
 
 .recommend-spot-three {
@@ -398,7 +411,7 @@ p {
 .recommend-spot-three .three-img2 {
     margin-left: 8.8194%;
     margin-top: 50px;
-    width: 45.8333%;
+    width: 40.8333%;
 }
 
 .recommend-spot-three .box-three {
@@ -419,7 +432,7 @@ p {
 .recommend-spot-four .box-four {
     margin-left: 9.375%;
     position: absolute;
-    bottom: -58.36%;
+    top: 90%;
 }
 
 #access {
@@ -484,4 +497,189 @@ footer p {
     font-size: 13px;
     margin-top: 1px;
     padding-bottom: 37px;
+}
+
+
+@media screen and (min-width: 769px) {
+    .br-sp { display: none; }
+}
+@media screen and (max-width: 768px) {
+    #recommend-spots {
+        padding-bottom: 450px;
+    }
+
+    .recommend-spot-text-box {
+        width: 64%;
+        height: 280px;
+        flex-direction: column;
+    }
+
+    .recommend-spot-text-box .spot-name {
+        height: 80px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .recommend-spot-text-box .spot-name h3 {
+        display: inline-block;
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .recommend-spot-text-box h3:before {
+        width: 48px;
+    }
+
+    .recommend-spot-text-box {
+        padding-left: 14px;
+        padding-right: 10px;
+    }
+
+    .map {
+        height: 400px;
+    }
+
+    footer {
+        margin-top: 100px;
+    }
+
+    .footer-text-main {
+        font-size: 24px;
+    }
+
+    .footer-text-sub {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .br-pc {
+        display: none;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    .nav a {
+        font-size: 32px;
+    }
+    #introduction {
+        margin-top: 20px;
+    }
+    #introduction h2 {
+        padding-top: 195px;
+    }
+    .introduction-text-main {
+        margin-top: 80px;
+        font-size: 24px;
+        letter-spacing: 0.05em;
+    }
+    .introduntion-text-sub {
+        margin-top: 40px;
+        font-size: 16px;
+        letter-spacing: 0.15em;
+        line-height: 1.8125;
+    }
+
+    #recommend-spots {
+        margin-top: 242px;
+    }
+    #recommend-spots h2 {
+        padding-top: 130px;
+    }
+    .recommend-spot-text-box {
+        height: 320px;
+        width: 76.923%;
+        box-shadow: 5px 5px #EAF8FF;
+    }
+    .recommend-spot-text-box .spot-name {
+        height: 100px;
+    }
+    .recommend-spot-text-box p {
+        padding-left: 14px;
+    }
+    .recommend-spot-one {
+        margin-top: 120px;
+    }
+    .recommend-spot-one img {
+        margin-left: 5.1282%;
+        width: 77.9487%;
+    }
+    .recommend-spot-one .box-one {
+        margin-left: 15.3846%;
+    }
+    .recommend-spot-two {
+        margin-top: 465px;
+    }
+    .recommend-spot-two .spot-two-img1 {
+        margin-left: 46.1538%;
+        width: 43.8461%;
+    }
+    .recommend-spot-two .spot-two-img2 {
+        top: 140%;
+        margin-left: 12.8205%;
+        width: 55.3846%;
+    }
+    .recommend-spot-two .box-two {
+        margin-left: 8.4615%;
+        top: 409.6%
+    }
+    .recommend-spot-three {
+        margin-top: 888px;
+        position: relative;
+    }
+    .recommend-spot-three .three-img1 {
+        margin-left: 7.6923%;
+        width: 83.0769%;
+    }
+    .recommend-spot-three .box-three {
+        margin-top: 20px;
+        margin-left: 18.2051%;
+    }
+    .recommend-spot-three .three-img2 {
+        margin-left: 6.4102%;
+        width: 50.7692%;
+        position: absolute;
+        top: 90%;
+    }
+    .recommend-spot-four {
+        margin-top: 290px;
+    }
+    .recommend-spot-four img {
+        margin-left: 0;
+        width: 90.2564%;
+    }
+    .recommend-spot-four .box-four {
+        margin-left: 9.375%;
+        position: absolute;
+        top: 90%;
+    }
+    .recommend-spot-four .box-four {
+        margin-left: 7.6923%;
+    }
+    #access h2 {
+        padding-top: 90px;
+    }
+    .map {
+        margin: 40px auto 0;
+        height: 300px;
+        width: 89.7435%;
+    }
+    .access-image {
+        margin-top: 14px;
+    }
+    .access-image img {
+        width: 95.7743%;
+    }
+    footer {
+        margin-top: 70px;
+    }
+    .footer-text-main {
+        padding-top: 86px;
+    }
+    .footer-text-sub {
+        margin-top: 55px;
+    }
 }
