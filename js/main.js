@@ -11,8 +11,6 @@ $(function ($) {
         }
     });
 
-    $('#youtubePlayer').YTPlayer();
-
     $('.fadein').css('visibility', 'hidden');
     $(window).scroll(function () {
         var windowHeight = $(window).height(),

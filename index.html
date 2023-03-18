@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Noto+Serif+JP:wght@300;400;600&display=swap"
         rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="js/jquery.mb.YTPlayer.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -33,8 +32,8 @@
               <li class="nav_menu_li"><a href="#access">Access</a></li>
             </ul>
           </nav>          
-        <!-- <div class="video-area">
-            <video class="video" poster="images/sea.JPG" webkit-playsinline playsinline muted autoplay loop> -->
+        <div class="video-area">
+            <video class="video" poster="images/sea.JPG" webkit-playsinline playsinline muted autoplay loop>
                 <!--
             poster：動画ファイルが利用できない環境で代替表示される画像
             webkit-playsinline：iOS 9までのSafari用インライン再生指定
@@ -44,22 +43,10 @@
             loop：動画をループさせる
             controls：コントロールバーを表示する
         -->
-                <!-- <source src="images/movie.mp4" type="video/mp4">
-                <source src="images/movie.webm" type="video/webm">
+                <source src="images/oideyoZushiMovie.mp4" type="video/mp4">
+                <source src="images/oideyoZushiMovie.webm" type="video/webm">
                 <p>動画を再生できる環境ではありません。</p>
             </video>
-        </div> -->
-        <div class="video-area">
-            <div id="youtubePlayer" data-property="{
-                videoURL: 'https://youtu.be/bVupxi7oD-Q', //動画ID、またはURL
-                containment: '.video-area', //動画を囲う親要素を指定
-                mute: true, //音声ミュート
-                loop: true, //ループ再生
-                autoPlay: true, //自動再生
-                startAt: 0, //動画を何秒の地点から再生するか
-                showControls: false, //動画のコントロールナビゲーションを非表示
-                showYTLogo: false //Youtubeロゴや動画URLへのリンクを非表示
-            }"></div>
         </div>
         <div class="scrolldown"></div>
     </header>
